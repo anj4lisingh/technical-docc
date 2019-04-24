@@ -1,0 +1,109 @@
+html {
+		scroll-behavior: smooth;
+}
+body {
+	background: #ccffff;
+	display:grid;
+	grid-template-columns: 216px 1fr;
+	grid-template-areas:
+	"nav main";
+	margin: 0;
+	font-family: Arial;
+}
+
+/*NAVBAR STYLING LAPTOP AND DESKTOP*/
+#navbar {
+	grid-area: nav;
+	background: #33cc33;
+	position: fixed;
+	height: 100%;
+
+}
+#navbar h1 {
+	padding: 20px 0 20px 40px;
+	margin: 0;
+	background: #fff;
+	font-weight: 700;
+	font-size: 2em;
+	color: #0251ab;
+	border: 3px solid grey;
+	border-radius: 5px;
+	margin: 5px;
+}
+#navbar ul {
+	padding: 0;
+	margin:0;
+}
+
+#navbar li {
+	padding: 20px 20px 20px 40px;
+	/*border-bottom: 2px solid grey;*/
+	list-style:none;
+	border-radius: 5px;
+	background: #fff;
+	margin: 5px;
+	font-weight: 700;
+}
+#navbar li a {
+	text-decoration: none;
+	color: #000;
+}
+
+#main-doc {
+	grid-area: main;
+
+}
+.main-section {
+	background: #fff;
+	padding: 5px 10px;
+	margin: 2vh 3vw 2vh 3vw;
+	border-radius: 5px;
+}
+
+.main-section h3 {
+	padding-left: 1vw;
+}
+.main-section p, .main-section pre, .main-section ul {
+	padding-left: 2vw;
+}
+.main-section code {
+	background: #e9f1f5;
+	border-radius: 2px
+}
+
+.main-section ul, .main-section pre {
+	background: #e9f1f5;
+	border-radius: 5px;
+	list-style-position: inside;
+	/*padding: 5px;*/
+}
+.main-section ul a{
+	text-decoration: none;
+}
+
+
+@media (max-width: 700px){
+	body {
+		display: grid;
+		grid-template-columns: 0;
+		grid-template-rows: auto 1fr ;
+		grid-template-areas: "nav1"  "main1";
+	}
+
+	#navbar {
+		grid-area: nav1;
+		position: relative;
+		width: 95vw;
+		text-align: center;
+			}
+
+
+	#main-doc{
+	grid-area: main1;
+	width: 95vw;
+}
+#navbar h1, #navbar ul li {
+	padding: 10px 20px;
+}
+
+}
